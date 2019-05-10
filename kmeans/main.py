@@ -6,9 +6,9 @@ import csv
 #initialization for generate samples data
 dim = 2; 'feature'
 N_data = 50
-N_groups = 6
-max_val = [2, 1, 2, 3, 2, 3]; 'must same as group'
-min_val = [1, 2, 2, 4, 1, 4];
+N_groups = 3
+max_val = [2, 1, 2, 3, 2, 2]; 'must same as group'
+min_val = [1, 2, 2, 4, 1, 2];
 
 #main: create samples data
 data = f.GenerateData(dim, N_data, N_groups, max_val, min_val)
@@ -32,14 +32,17 @@ plt.figure(2)
 j=0
 colors = cycle('bgrcmykbgrcmykbgrcmykbgrcmyk')
 for i, col in zip(range(len(kq[0])), colors):
-    for q in range(len(kq[0][0])):
+    for q in range(len(kq[0][i])):
         plt.plot(kq[0][i][q][j], kq[0][i][q][j+1], col + '.')
     j=0
 
 #plot centers
 n=0
 for m, col in zip(range(N_groups), colors):
-    plt.plot(kq[1][m][n], kq[1][m][n+1], col + '^', markersize=14)
+    if (len(kq[1][m]) == 0):
+        plt.plot(0, 0, col + '^', markersize=14)
+    else:
+        plt.plot(kq[1][m][n], kq[1][m][n+1], col + '^', markersize=14)
     n=0
 
 plt.title('Number of data: %d. Number of clusters: %d. F1 Score: %.4f' % (len(data[0]), len(kq[0]), f1))
