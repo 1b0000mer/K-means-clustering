@@ -29,7 +29,7 @@ data, labels_true = make_blobs(n_samples=n*3, centers=centers, cluster_std=sprea
 fig1 = plt.figure(1)
 plt.scatter(data[:,0], data[:,1])
 
-fig2 = plt.figure(2, figsize=(12,6))
+fig2 = plt.figure(2, figsize=(9,7))
 plt.title('Data with true labels')
 for i, color in zip(range(k), colors):
     k_members = labels_true == i
@@ -49,7 +49,7 @@ for i, color in zip(range(k), colors):
     temp = np.array(result[i])
     plt.scatter(temp[:,0], temp[:,1])
 
-fig4 = plt.figure(4, figsize=(12,6))
+fig4 = plt.figure(4, figsize=(9,7))
 plt.title('Data with learned labels. F1 score: %.4f' % f1)
 for i, color in zip(range(k), colors):
     k_members = labels_learned == i
