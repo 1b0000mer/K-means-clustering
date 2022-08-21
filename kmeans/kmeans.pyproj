@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e050dca5-bebb-4fab-9aa2-64a31eee5e70</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>kmeans_ap.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,12 +22,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="kmeans_ap.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="function.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="kmeans_ap_data.py" />
+    <Compile Include="kmeans_ap_samples.py" />
     <Compile Include="main.py" />
   </ItemGroup>
   <ItemGroup>
