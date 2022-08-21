@@ -1,4 +1,4 @@
-ten_xe,luong_hao_xang,so_luong_xi_lanh,the_tich_dong_co,ma_luc,ty_le_truc_sau,khoi_luong_xe,gia_toc_xe,loai_xy_lanh_dong_co,loai_truyen_dong,so_luong_banh_rang,so_luong_bo_che_hoa_khi
+vehicle_name, fuel_consumption, num_cylinders, engine_volumetric, horse_power, rear_ratio, vehicle_weight, vehicle_acceleration, engine_cylinder_type, transmission_type, num_gears, num_carburetors
 Mazda RX4,21,6,160,110,3.9,2.62,16.46,0,1,4,4
 Mazda RX4 Wag,21,6,160,110,3.9,2.875,17.02,0,1,4,4
 Datsun 710,22.8,4,108,93,3.85,2.32,18.61,1,1,4,1
@@ -150,7 +150,6 @@ Toyota Corolla 1200,26,4,120.3,91,4.43,2.14,16.7,0,1,5,2
 Chevrolet Vega,30.4,4,95.1,113,3.77,1.513,16.9,1,1,5,2
 Chevrolet Chevelle Malibu Classic,21,6,160,110,3.9,2.62,16.46,0,1,4,4
 AMC Matador,21,6,160,110,3.9,2.875,17.02,0,1,4,4
-Plymouth Satellite Sebring;18.0;6;225.0;105.0;3613.;16.5;74;US,22.8,4,108,93,3.85,2.32,18.61,1,1,4,1
 Ford Gran Torino,21.4,6,258,110,3.08,3.215,19.44,1,0,3,1
 Buick Century Luxus,18.7,8,360,175,3.15,3.44,17.02,0,0,3,2
 Dodge Coronet Custom,18.1,6,225,105,2.76,3.46,20.22,1,0,3,1
