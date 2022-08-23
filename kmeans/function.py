@@ -135,7 +135,7 @@ def new_kmeans(data, features, k, threshold=0.001, rand_centers=True, centers=[]
                 new_centers[i] = np.mean(k_members, axis=0)
 
         if gif:
-            fig = _plot_iteration(data, learned_label, new_centers, iter, real_data=True, x_col='Age', y_col='Spending Score (1-100)')
+            fig = _plot_iteration(data, learned_label, new_centers, iter, real_data=False)
             figures.append(fig)
             plt.close()
 

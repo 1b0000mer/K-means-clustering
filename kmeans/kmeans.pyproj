@@ -27,6 +27,12 @@
     </Compile>
     <Compile Include="kmeans_ap_data.py" />
     <Compile Include="kmeans_ap_samples.py" />
+    <Compile Include="kmeans_cars.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kmeans_customers.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="main.py" />
   </ItemGroup>
   <ItemGroup>
