@@ -74,7 +74,7 @@ def gen_data(dim, N_data, N_groups, y_val, x_val):
             true_lbl.append(i)
     return dataArray, true_lbl
 
-def new_kmeans(data, features, k, threshold=0.001, rand_centers=True, gif=True):
+def new_kmeans(data, features, k, threshold=0.001, rand_centers=True, centers=[], gif=True):
     '''
     clustering data using kmeans
     +features: dimension of the data (columns)
@@ -91,14 +91,18 @@ def new_kmeans(data, features, k, threshold=0.001, rand_centers=True, gif=True):
     
     size = (k,features)
     base_centers = np.zeros(shape=size) #(row,col)
-    if (rand_centers):
-        for i in range(k):
-            base_centers[i] = _new_init_centers(features, data)
-        print('Done init centers! Choosen centers: \n', base_centers)
-    else:
-        for i in range(k):
-            base_centers[i] = data[randint(0, len(data)-1)]
+    if (len(centers) > 0):
+        base_centers = np.array(centers)
         print('choosen centers: \n', base_centers)
+    else:
+        if (rand_centers):
+            for i in range(k):
+                base_centers[i] = _new_init_centers(features, data)
+            print('Done init centers! Choosen centers: \n', base_centers)
+        else:
+            for i in range(k):
+                base_centers[i] = data[randint(0, len(data)-1)]
+            print('choosen centers: \n', base_centers)
 
     old_centers = np.array(base_centers)
     new_centers = np.array(base_centers)
@@ -172,7 +176,9 @@ def F1_score(true_lbl, learned_lbl):
                         FP=FP+1
 
     Precision = TP/(TP+FP)
+    print('Precision: %.4f' %Precision)
     Recall = TP/(TP+FN)
+    print('Recall: %.4f' %Recall)
     F1 = 2*Precision*Recall/(Precision + Recall)
 
     return F1
