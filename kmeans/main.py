@@ -11,7 +11,7 @@ colors = cycle('bgrcmykbgrcmykbgrcmykbgrcmyk')
 
 #samples data
 #Generate sample data
-n = 100 # number elements for each cluster
+n = 10 # number elements for each cluster
 dim = 2 # 2-D data point aka features
 k = 3
 spread = .5 #0-1
